@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <header>
+            <div class='headerText'> 
+                {{ title }}
+            </div>
+        </header>
+        <main>
+            <div class= "imgDiv"> 
+                {% for photo in photos %}
+                    <img class= "img" src="{{ photo.address_photo }}">    
+                {% endfor %}
+             </div>
+           
+        </main>
+    </body>
+    <footer>
+
+    </footer>
+</html>
+
+<style type="text/css">
+ /*стилей не много, поэтому не подключала их отдельно*/
+body {
+    background-color: #d8da3d; 
+}
+
+.headerText {
+    color:green;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.imgDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px; 
+
+}
+.img {
+    width: 100%;
+    border: 2px solid green;
+    margin: 10px;
+} 
+
+</style>
