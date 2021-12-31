@@ -1,0 +1,4 @@
+product_insert:
+  path: /book/new
+  controller: App\Controller\BookController::insertBook
+  methods: GET
